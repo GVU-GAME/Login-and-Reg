@@ -22,24 +22,22 @@ int UI::promt() {
 }
 
 void UI::createAcc() { 
-    string username, password, info;
+    string username, password;
 
     cout << "Enter a Username: " << endl;
     cin >> username;
     cout << "Enter a Password: " << endl;
     cin >> password;
-    cout << "Enter any info you want stored in file" << endl;
-    cin >> info;
 
     ofstream file;
     file.open("Users//" + username + ".txt");
-    file << username << endl << password << endl << info << endl;
+    file << username << endl << password << endl;
     cout << endl;
     file.close();
 }
 
 bool UI::accessAcc() {
-    string username, password, un, pw, info;
+    string username, password, un, pw;
 
     cout << "Enter Username: " << endl;
     cin >> username;
@@ -50,11 +48,9 @@ bool UI::accessAcc() {
 
     getline(read, un);
     getline(read, pw);
-    getline(read, info);
 
     if(username == un && password == pw) {
         cout << "Successful Login" << endl;
-        cout << info << endl;
         return false;
     } else {
         cout << "Failed Login, Try again!" << endl;
