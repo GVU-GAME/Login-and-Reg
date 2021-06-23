@@ -28,7 +28,7 @@ void UI::createAcc() {
     cin >> username;
     cout << "Enter a Password: " << endl;
     cin >> password;
-    cout << "Enter any info you want stored in file" << endl;
+    cout << "Enter any info you want stored" << endl;
     cin >> info;
 
     ofstream file;
