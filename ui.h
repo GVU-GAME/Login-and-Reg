@@ -5,6 +5,8 @@
 #include <string>
 #include <fstream>
 
+using namespace std;
+
 class UI {
 public:
     UI();
@@ -14,6 +16,7 @@ private:
     int promt();
     void createAcc();
     bool accessAcc();
+    bool checkName(string);
 };
 
 #endif
