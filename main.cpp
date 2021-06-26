@@ -4,7 +4,7 @@
 int main () {
     try
     {
-        UI ui = UI();
+        UI ui;
         ui.start();
     }
     catch(const std::exception& e)
